@@ -1,46 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <title>Fisheye - photographe </title>
+         
+    <title>Fisheye - photographe</title>
   </head>
   <body>
       
-    <header> 
-      <a href="/index.html">
-      <img src="assets/images/logo.png" class="logo" />
+    <header  tabindex="1"  role ="logo de site" aria-label= "appuyer pour retourner a la page d'accueil"> 
+      <a href="/index.html" tabindex="-1">
+      <img src="assets/images/logo.png"  alt="logo"  class="logo" />
     </a>
     </header>
     <main id="main">
-      <div class="photograph-header">
-        <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+      <div class="photograph-header" >
+        <button class="contact_button" tabindex="2" onclick="displayModal()">Contactez-moi</button>
       </div>
     </main>
     <div id="contact_modal">
 			<div class="modal">
 				<header>
-          <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" />
+          <h2 class="contact_moi">Contactez-moi</h2>
+ 
+          <img class="close_modal" src="assets/icons/close.svg" onclick="closeModal()" />
         </header>
-				<form>
+				<form id="form_contact" class="form_contact">
+ 
 					<div>
-						<label>Prénom</label>
-						<input />
+						<label for ="prenom" >Prénom</label>
+						<input type="text" id= "prenom" />
+            <label for ="nom" >Nom</label>
+						<input type="text" id= "nom" />
+            <label for ="email" >Email</label>
+						<input type="email" id= "email" />
+            <label for ="message" >Votre message : </label>
+            <textarea id= "message" class="msg_input" >
+                  </textarea>
+
 					</div>
           <button class="contact_button">Envoyer</button>
 				</form>
 			</div>
 		</div>
-    <script src="/scripts/utils/contactForm.js"></script>
-    <script src="/scripts/pages/photographer.js"></script>
+
+    <script     src="/scripts/pages/photographer.js"></script>
+
+
 
     <script src = 
     "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" >
             </script>
   </body>
+  <script   src="/scripts/utils/contactForm.js"></script>
+
 </html>
