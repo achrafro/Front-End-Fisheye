@@ -1,4 +1,7 @@
-
+html ,body {
+    margin: 0 ;
+    padding: 0;
+}
 .logo {
     height: 50px;
     margin-left: 100px;
@@ -7,9 +10,17 @@
 #contact_modal {
     display: none;
     position: fixed;
-    top: 10px;
-    right: 10px;
-    width: 110%;
+    margin: 0;
+    padding: 0;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #C4C4C440;
+    ;
+    /* Fully transparent */
+
+
 }
 
 .photograph-header {
@@ -36,15 +47,17 @@
 }
 
 .modal {
-    border-radius: 5px;
-    background-color: #DB8876;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 35px;
-    margin: auto;
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    margin: auto auto;
+    border-radius: 3px;
+    width: 20rem;
+     overflow: hidden;
+    background-color: #D3573C;
+    padding: 1rem 2rem 3rem 2rem;
 }
 
 .modal header {
@@ -54,12 +67,16 @@
 
 .modal header img {
     cursor: pointer;
+    width: 27px;
+    height: 34px;
 }
 
 .modal header h2 {
-    font-size: 64px;
-    font-weight: normal;
-    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 3rem;
+    padding-bottom: 50px;
 }
 
 form {
@@ -67,11 +84,12 @@ form {
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
+    padding-top: 20px;
 }
 
 form label {
     color: #312E2E;
-    font-size: 36px;
+    font-size:25px;
 }
 
 form div {
@@ -84,9 +102,14 @@ form div {
 
 form input {
     width: 100%;
-    height: 68px;
+    height: 30px;
     border: none;
     border-radius: 5px;
+}
+.msg_input {
+
+    height: 5rem;
+    width: 100%;
 }
 .photo_de_profil {
     border-radius: 100%;
@@ -123,8 +146,12 @@ form input {
 .galerie {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
-gap : 10px;
-margin: 0 50px;
+ margin:0 50px;
+width: 90%;
+gap: 3px;
+align-items: center;
+justify-items: center;
+
 }
 
 /* card de galerie */
@@ -142,7 +169,7 @@ position: relative;
 
     
 width: 300px;
-height: 300px;
+height: 250px;
 object-fit: cover;
 order: 0;
 grid-column: 1 /-1;
@@ -233,7 +260,7 @@ cursor: pointer;
 .slider {
 width: 100%;
 height: 100%;
-background-color: rgba(184, 184, 179, 0.5);
+background-color: white;
 position: fixed;
 top : 0;
 right: 0;
@@ -259,12 +286,16 @@ display: none;
 .image_slider {
 
     position: fixed;
-    top: 103px;
-    left : 10rem;
-    width: 767px;
-    height: 500px;
+
+    left: 50%;
+    transform: translate(-50%, 30%);
+ 
+ 
+
+    width: 60%;
+    height: 60%;
     object-fit: cover; 
-    border: 5px solid purple;
+    border: 3px solid purple;
  }
  .close_btn {
 position: fixed;
@@ -286,3 +317,69 @@ cursor: pointer;
     border: 5px solid purple;
 
   }
+  .titre_media { 
+    font-size: 24px;
+    color: #901c1c;
+    font-weight: 400;
+    position: fixed;
+    bottom: 77px;
+    left: 20%;   
+  }
+
+  .close_modal {
+
+position: absolute;
+top : 1rem ;
+right: 1rem;
+
+  }
+
+
+@media only screen and (max-width: 1040px){
+    /*style  pour tablette  */
+
+    .photograph-header {
+
+        grid-template-columns : 1FR;     
+        margin: 0px;   
+         width: 100%;
+    }
+    .contact_button {
+        margin: auto;
+        order: 3;
+        
+        
+    }
+    .photo_de_profil {
+        order: 1     ;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    .newdiv{
+        margin: auto;
+        order: 2;
+        margin-bottom: 30px;
+
+    }
+    .galerie {
+
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        margin: 0;
+     }
+
+}
+
+@media only screen and (max-width: 683px){
+
+    .galerie {
+
+        grid-template-columns: repeat(1, 1fr);
+         
+        align-items: center;
+        justify-items: center;
+
+     
+    }
+
+}
