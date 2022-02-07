@@ -151,7 +151,7 @@ async function getPhotographerInformation() {
         box_image.className = "box_image";
         box_image.setAttribute(
           "src",
-          "/assets/photographers/" + first + "/" + media.image
+          "https://achrafro.github.io/Front-End-Fisheye/assets/photographers/" + first + "/" + media.image
         );
         box_image.setAttribute("tabindex","5")
 
