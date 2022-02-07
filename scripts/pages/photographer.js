@@ -335,7 +335,7 @@ async function getPhotographerInformation() {
           let image = document.createElement("img");
           image.className = "image_slider";
           let img_src = e.target.getAttribute("src");
-          image.setAttribute("src", ".." + img_src);
+          image.setAttribute("src",img_src);
           slide.appendChild(image);
           let titre_media = document.createElement("p");
           titre_media.className = "titre_media";
@@ -350,7 +350,7 @@ async function getPhotographerInformation() {
           let source_video = document.createElement("source");
           video_slider.appendChild(source_video);
           let vid = e.target.childNodes[0].getAttribute("src");
-          source_video.setAttribute("src", ".." + vid);
+          source_video.setAttribute("src",vid);
           slide.appendChild(video_slider);
           let titre_media = document.createElement("p");
           titre_media.className = "titre_media";
