@@ -285,18 +285,18 @@ async function getPhotographerInformation() {
     let left_flech = document.createElement("img");
     left_flech.setAttribute("tabindex","1")
     left_flech.className = "left_flech";
-    left_flech.setAttribute("src", "..//assets/icons/left.png");
+    left_flech.setAttribute("src", "https://achrafro.github.io/Front-End-Fisheye/assets/icons/left.png");
     slide.appendChild(left_flech);
     let right_flech = document.createElement("img");
     right_flech.className = "right_flech";
     right_flech.setAttribute("tabindex","2")
-    right_flech.setAttribute("src", "..//assets/icons/right.png");
+    right_flech.setAttribute("src", "https://achrafro.github.io/Front-End-Fisheye/assets/icons/right.png");
     slide.appendChild(right_flech);
     // close btn
     let close_btn = document.createElement("img");
     close_btn.className = "close_btn";
     close_btn.setAttribute("tabindex","3")
-    close_btn.setAttribute("src", "..//assets/icons/close.png");
+    close_btn.setAttribute("src", "https://achrafro.github.io/Front-End-Fisheye/assets/icons/close.png");
     slide.appendChild(close_btn);
     box = document.querySelectorAll(".box_image");
 
