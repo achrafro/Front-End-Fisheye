@@ -14,7 +14,7 @@ var photographerPortrait;
 var Media_de_photographer = [];
 
 async function getPhotographerInformation() {
-  const response = await fetch("..//data/photographers.json");
+        const response = await fetch('https://achrafro.github.io/Front-End-Fisheye/data/photographers.json');
 
   const data = await response.json();
 
