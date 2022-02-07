@@ -2,7 +2,7 @@
         // Penser à remplacer par les données récupérées dans le json
 
           
-        const response = await fetch('..//data/photographers.json');
+        const response = await fetch('https://achrafro.github.io/Front-End-Fisheye/data/photographers.json');
 
         const data = await response.json();
 
