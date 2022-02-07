@@ -49,7 +49,7 @@ async function getPhotographerInformation() {
   function ajouter_info_photographer() {
     let photograph_header = document.querySelector(".photograph-header");
     let img = document.createElement("img");
-    img.setAttribute("src", "/assets/photographers/" + photographerPortrait);
+    img.setAttribute("src", "https://achrafro.github.io/Front-End-Fisheye/assets/photographers/" + photographerPortrait);
     img.className = "photo_de_profil";
     img.setAttribute("tabindex","2")
     img.setAttribute("ALT","photo de profil de "+photographerName)
